@@ -1,0 +1,115 @@
+body{
+    margin: 0;padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+ul,li,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.container{
+    width: 100%;height: auto;
+    margin: 0 auto;
+
+}
+.menu{
+    width: 100%;height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background:#000;
+    color:#fff;
+
+}
+.box{
+    background: url("../58S58PICsMN_1024.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+@media screen and (min-width: 700px) {
+
+
+.menu .parent{
+    width: 12.5%;
+    height: 100%;
+    float: left;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+    .yincang{
+        display: none;
+    }
+.menu .parent div{
+    width: 100%;
+    height: 100%;
+}
+.menu .parent .son{
+    width: 100%;
+    display: none;
+    color:#000;
+    height: 80%;
+}
+.menu .parent .son li:hover{
+    background: #888;
+    color:#fff;
+}
+}
+.box{
+    width: 100%;
+    /*height: 600px;*/
+    position: relative;
+}
+.box .xp{
+    width: 10px ; height: 10px; border: 1px solid #000;
+    position: absolute; top:0px;left:0px;z-index: 999;
+    display: none;
+}
+.box .copy{
+    position: absolute;left: 0;
+    top:0;z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.selector{
+    width: 100px;height: 100px;border:1px dotted #000;
+    position: absolute;top: 0;left: 0;
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .menu .parent{
+        width: 30%;
+        height: 100%;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        background: #000;
+    }
+    .hasson{
+        display: none;
+    }
+    .yincang{
+        display: block;
+    }
+    .menu .parent div{
+        width: 100%;
+        height: 100%;
+    }
+    .menu .parent .son{
+        width: 200%;
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 100%;
+        color:#000;
+        height: 80%;
+    }
+    .son li{
+        width: 20%;float: left;
+    }
+    .menu .parent .son li:hover{
+        background: #888;
+        color:#fff;
+    }
+}
