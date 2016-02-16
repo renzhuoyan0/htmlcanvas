@@ -123,7 +123,7 @@ shape.prototype={
         that.copy.onmousemove=function(e){
             var ox = e.offsetX;
             var oy = e.offsetY;
-            xpobj.css({display:"block",width:w,height:h})
+            xpobj.css({width:w,height:h})
             var ox = e.offsetX;
             var oy = e.offsetY;
             var lefts = ox - w / 2;
@@ -169,15 +169,16 @@ shape.prototype={
                     top: tops,
                     display:"block"
                 })
+
                 that.cobj.clearRect(lefts, tops, w, h);
 
             }
-            that.copy.onmouseup=function(){
+            window.onmouseup=function(){
+                console.log(1);
                 xpobj.css("display","none");
                 that.history.push(that.cobj.getImageData(0,0,that.width,that.height));
                 that.copy.onmousemove=null;
                 that.copy.onmouseup=null;
-                that.xp(xpobj,w,h)
             }
         }
     },

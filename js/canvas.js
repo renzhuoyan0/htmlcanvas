@@ -70,8 +70,9 @@ $(function(){
         $(this).parent().find("li").css({color:"#000"});
         $(this).css("color","red");
         var w = $(this).attr("data-role");
+        var h = $(this).attr("data-role");
         $(this).parent().hide();
-        obj.xp($(".xp"),w);
+        obj.xp($(".xp"),w,h);
 
     })
     $(".lineColor input").change(function(){
